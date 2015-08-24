@@ -1,5 +1,5 @@
 # FunCrop
-Video Crop and a lots of transition effect in the video. Tested on iPhone 4 and iPhone 5S.
+Video split and a lots of transition effect in the video. Tested on iPhone 4 and iPhone 5S.
   
 Johnny Xu(徐景周)  
 Future Studio  
