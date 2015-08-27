@@ -6,8 +6,8 @@
 //  Copyright (c) 2015 Johnny Xu. All rights reserved.
 //
 
-#ifndef ScreenRecorder_CommonDefine_h
-#define ScreenRecorder_CommonDefine_h
+#ifndef CommonDefine_h
+#define CommonDefine_h
 
 #import <AVFoundation/AVFoundation.h>
 #import "SNLoading.h"
