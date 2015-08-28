@@ -4,4 +4,5 @@ Video split and a lots of transition effect in the video. Tested on iPhone 4 and
 Johnny Xu(徐景周)  
 Future Studio  
 
-<img src="https://github.com/xujingzhou/FunCrop/blob/master/Resource/Demo/EN_640x960_1.png" width = "300" height = "400" alt="Demo" align=center />
+Demo:  
+<img src="https://github.com/xujingzhou/FunCrop/blob/master/Resource/Demo/Demo.gif" width = "300" height = "500" alt="Demo" align=center />
