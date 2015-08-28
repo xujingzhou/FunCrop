@@ -687,31 +687,4 @@ static inline UIInterfaceOrientation orientationForTrack(AVAsset *asset)
         return UIInterfaceOrientationPortrait;
 }
 
-#pragma mark - JailBreak Device
-
-#define ARRAY_SIZE(a) sizeof(a)/sizeof(a[0])
-const char* jailbreak_tool_pathes[] =
-{
-    "/Applications/Cydia.app",
-    "/Library/MobileSubstrate/MobileSubstrate.dylib",
-    "/bin/bash",
-    "/usr/sbin/sshd",
-    "/etc/apt"
-};
-
-static inline BOOL isJailBreak()
-{
-    for (int i=0; i<ARRAY_SIZE(jailbreak_tool_pathes); i++)
-    {
-        if ([[NSFileManager defaultManager] fileExistsAtPath:[NSString stringWithUTF8String:jailbreak_tool_pathes[i]]])
-        {
-            NSLog(@"The device is jail broken!");
-            return YES;
-        }
-    }
-    
-    NSLog(@"The device is NOT jail broken!");
-    return NO;
-}
-
 #endif
