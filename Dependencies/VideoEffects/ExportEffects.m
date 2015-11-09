@@ -53,11 +53,11 @@
     {
         _timerEffect = nil;
         _exportSession = nil;
-        
         _filenameBlock = nil;
         
         _clips = [[NSMutableArray alloc] initWithCapacity:SplitCount];
         _clipTimeRanges = [[NSMutableArray alloc] initWithCapacity:SplitCount];
+        
         _transitionType = kTransitionTypeNone;
         _transitionDuration = CMTimeMake(60, 600);
     }
@@ -458,6 +458,7 @@
     {
         useAudio = NO;
     }
+    
     [self buildTransitionComposition:composition withVideoComposition:videoComposition withAudio:useAudio];
     
     if (videoComposition)
@@ -680,7 +681,7 @@
                             
                             if ([_clips count] == SplitCount)
                             {
-                                [self synchronizeMergeVideo:(arc4random()%kTransitionTypePushVerticalFromTop) + kTransitionTypePushHorizontalSpinFromRight withAudioFilePath:audioFilePath];
+                                [self synchronizeMergeVideo:[self getTranstionAnimationType] withAudioFilePath:audioFilePath];
                             }
                         });
                     }
@@ -1023,6 +1024,21 @@
     else
     {
         return NO;
+    }
+}
+
+#pragma mark - TranstionAnimationType
+- (TransitionType)getTranstionAnimationType
+{
+    NSString *flag = @"TranstionAnimationType";
+    NSUserDefaults *userDefaultes = [NSUserDefaults standardUserDefaults];
+    if ([userDefaultes objectForKey:flag])
+    {
+        return [[userDefaultes objectForKey:flag] integerValue];
+    }
+    else
+    {
+        return kTransitionTypeNone;
     }
 }
 

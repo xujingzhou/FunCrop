@@ -8,3 +8,12 @@
 
 "Demo" = "演示";
 "DemoButton" = "示例按钮";
+
+"Animation" = "动画特效";
+"None" = "None";
+"HorizontalSpinFromRight" = "HorizontalSpinFromRight";
+"HorizontalFromRight" = "HorizontalFromRight";
+"HorizontalFromLeft" = "HorizontalFromLeft";
+"VerticalFromBottom" = "VerticalFromBottom";
+"VerticalFromTop" = "VerticalFromTop";
+"CrossFade" = "CrossFade";

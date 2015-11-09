@@ -856,6 +856,22 @@
     [userDefaultes synchronize];
 }
 
+#pragma mark - TranstionAnimationType
+- (void)setTranstionAnimationType:(TransitionType)filterType
+{
+    NSString *flag = @"TranstionAnimationType";
+    NSUserDefaults *userDefaultes = [NSUserDefaults standardUserDefaults];
+//    [userDefaultes setInteger:filterType forKey:flag];
+//    [userDefaultes synchronize];
+    
+    // Set default value
+    NSDictionary *userDefaultsDefaults = [NSDictionary dictionaryWithObjectsAndKeys:
+                                          [NSNumber numberWithInteger:filterType], flag,
+                                          nil];
+    [userDefaultes registerDefaults:userDefaultsDefaults];
+}
+
+
 #pragma mark - shouldVideoCrop
 - (void)setShouldVideoCrop:(BOOL)shouldCrop
 {
@@ -1023,7 +1039,6 @@
     [super viewDidLoad];
    
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"sharebg3"]];
-    
     _videoPickURL = nil;
     
     [self createNavigationItem];
@@ -1042,6 +1057,7 @@
     {
         [self setShouldDisplayDemoButton:YES];
         [self setShouldVideoCrop:YES];
+        [self setTranstionAnimationType:kTransitionTypePushHorizontalSpinFromRight];
     }
     else if (![self shouldDisplayDemoButton])
     {

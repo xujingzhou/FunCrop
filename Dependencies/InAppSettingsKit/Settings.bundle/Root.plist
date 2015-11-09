@@ -4,7 +4,7 @@
 <dict>
 	<key>PreferenceSpecifiers</key>
 	<array>
-		<dict>
+        <dict>
 			<key>Title</key>
 			<string>VideoOutput</string>
 			<key>Type</key>
@@ -20,6 +20,36 @@
 			<key>Type</key>
 			<string>PSToggleSwitchSpecifier</string>
 		</dict>
+        <dict>
+            <key>Titles</key>
+            <array>
+                <string>None</string>
+                <string>HorizontalSpinFromRight</string>
+                <string>HorizontalFromRight</string>
+                <string>HorizontalFromLeft</string>
+                <string>VerticalFromBottom</string>
+                <string>VerticalFromTop</string>
+                <string>CrossFade</string>
+            </array>
+            <key>Values</key>
+            <array>
+                <integer>0</integer>
+                <integer>1</integer>
+                <integer>2</integer>
+                <string>3</string>
+                <string>4</string>
+                <string>5</string>
+                <string>6</string>
+            </array>
+            <key>Type</key>
+            <string>PSMultiValueSpecifier</string>
+            <key>Title</key>
+            <string>Animation</string>
+            <key>Key</key>
+            <string>TranstionAnimationType</string>
+            <key>DefaultValue</key>
+            <integer>1</integer>
+        </dict>
 	</array>
 	<key>StringsTable</key>
 	<string>Root</string>
