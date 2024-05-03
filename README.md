@@ -6,5 +6,6 @@ Video split and a lots of transition effect in a video. Tested on iPhone 4 and i
 Demo:  
 https://www.kuaishou.com/f/X9JvRIwxMgmZKSR     
 
+Copyright and all rights therein are retained by authors or by other copyright holders.  
 Johnny Xu(徐景周)  
-Future Studio(未来工作室)
+Future Studio  
